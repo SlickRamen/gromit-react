@@ -1,0 +1,241 @@
+@import "../fnt/gromit-grom/gromit-grom.css";
+
+
+@font-face {
+    font-family: "Inter";
+    src: url("../fnt/Inter.ttf") format("truetype");
+}
+
+/* width */
+::-webkit-scrollbar-thumb {
+    background-color: var(--colour-ui-backer-dark);
+    border-radius: 1rem;
+    border: 0.1rem solid transparent;
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+* {
+    font-family: "Inter", Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    /* transition: background-color 0.1s; */
+}
+
+html {
+    background-color: var(--colour-ui-backer-light);
+}
+
+.page {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.layout {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    /*max-width: 1000px;*/
+}
+
+.lay-row {
+    display:flex;
+    flex-direction: row;
+    flex: 1;
+}
+
+.lay-column {
+    display:flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.lay-column.zero    { flex: 0; }
+.lay-column.one     { flex: 1; }
+.lay-column.two     { flex: 2; }
+.lay-column.three   { flex: 3; }
+.lay-column.four    { flex: 4; }
+.lay-column.five    { flex: 5; }
+.lay-column.six     { flex: 6; }
+.lay-column.seven   { flex: 7; }
+.lay-column.eight   { flex: 8; }
+.lay-column.nine    { flex: 9; }
+.lay-column.ten     { flex: 10; }
+
+.align-centre {
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    color: var(--colour-text);
+    text-decoration: none;
+    width: fit-content;
+}
+
+.title.selectable:hover {
+    background-color: var(--colour-ui-backer-medium);
+    cursor: pointer;
+}
+
+.heading {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--colour-ui-backer-dark);
+}
+
+.subheading {
+    font-size: 1rem;
+    font-style: italic;
+    opacity: 50%;
+}
+
+.sidebar {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    background-color: var(--colour-ui-backer-light);
+}
+
+.nav-block {
+    display: flex;
+    padding: 0 0 1rem 0;
+    width: 100%;
+    flex-direction: column;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+    overflow: hidden;
+    gap: 1rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.main-content-scroll {
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.padded-container {
+    padding: 1rem 1rem 0 1rem;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--colour-ui-backer-border);
+    margin: 0;
+    padding: 0;
+}
+
+.bold-button {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid var(--colour-ui-backer-medium);
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    border: none;
+
+    cursor: pointer;
+}
+
+.bold-button.fit {
+    width: fit-content;
+}
+
+.bold-button.spaced {
+    justify-content: space-between;
+}
+
+.options-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    outline: 1px solid var(--colour-ui-backer-medium);
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    font-size: 1.5rem;
+    border: none;
+    width: fit-content;
+
+    cursor: pointer;
+}
+
+.text-box {
+    width: 100%;
+    outline: 1px solid var(--colour-ui-backer-medium);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    background-color: var(--colour-ui-backer-light);
+}
+
+.info-block {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.info-link {
+    color: var(--colour-text);
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.info-link:hover,
+.info-link:focus {
+    color: var(--colour-text-hover);
+}
+
+.info-link:hover > span,
+.info-link:focus    > span {
+    text-decoration: underline;
+}
+

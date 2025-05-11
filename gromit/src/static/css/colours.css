@@ -1,0 +1,179 @@
+:root {
+    /* Default UI */
+    --colour-text:                          #000000;
+    --colour-text-holder:                   #858585;
+
+    --colour-ui-backer-light:               #f4f4f4;
+    --colour-ui-backer-medium:              #e1e1e1;
+    --colour-ui-backer-border:              #ccc;
+    --colour-ui-backer-dark:                #b5b5b5;
+
+    /* Interaction Type Colours */
+    --colour-interaction-warning-basic:     #ff4d4d;
+    --colour-interaction-warning-backer:    #ffd6d6;
+    --colour-interaction-warning-hover:     #ffbaba;
+
+    --colour-interaction-accept-basic:      #46834f;
+    --colour-interaction-accept-backer:     #cffbd5;
+    --colour-interaction-accept-hover:      #c0f8c7;
+
+    --colour-interaction-accent-basic:      #109bf1;
+    --colour-interaction-accent-backer:     #cfeefb;
+    --colour-interaction-accent-hover:      #a3d9fa;
+
+    --colour-interaction-cancel-basic:      #ccc;
+    --colour-interaction-cancel-backer:     transparent;
+    --colour-interaction-cancel-hover:      #e0e0e0;
+
+    --colour-interaction-empty-basic:       transparent;
+    --colour-interaction-empty-backer:      transparent;
+    --colour-interaction-empty-hover:       #e9e9e9;
+
+    /* Basic Colours */
+    --colour-yellow-basic:                  #d56631;
+    --colour-yellow-backer:                 #ffe9a6;
+    --colour-yellow-hover:                  #ffd771;
+
+    --colour-red-basic:                     #ff4d4d;
+    --colour-red-backer:                    #ffd6d6;
+    --colour-red-hover:                     #ffbaba;
+
+    --colour-green-basic:                   #46834f;
+    --colour-green-backer:                  #cffbd5;
+    --colour-green-hover:                   #c0f8c7;
+
+    --colour-blue-basic:                    #109bf1;
+    --colour-blue-backer:                   #cfeefb;
+    --colour-blue-hover:                    #a3d9fa;
+
+    --colour-purple-basic:                  #7e57c2;
+    --colour-purple-backer:                 #efe5fa;
+    --colour-purple-hover:                  #dac7f4;
+
+    --colour-dim-basic:                     #5d5d5d;
+    --colour-dim-backer:                    #e1e1e1;
+    --colour-dim-hover:                     #d2d2d2;
+}
+
+/* Colours */
+.yellow {
+    background-color:   var(--colour-yellow-backer) !important;
+    outline-color:      var(--colour-yellow-basic) !important;
+    color:              var(--colour-yellow-basic) !important;
+}
+
+.yellow:not(.no-hover):hover,
+.yellow:not(.no-hover):focus {
+    background-color:   var(--colour-yellow-hover) !important;
+}
+
+.red {
+    background-color:   var(--colour-red-backer) !important;
+    outline-color:      var(--colour-red-basic) !important;
+    color:              var(--colour-red-basic) !important;
+}
+
+.red:not(.no-hover):hover,
+.red:not(.no-hover):focus {
+    background-color:   var(--colour-red-hover) !important;
+}
+
+.green {
+    background-color:   var(--colour-green-backer) !important;
+    outline-color:      var(--colour-green-basic) !important;
+    color:              var(--colour-green-basic) !important;
+}
+
+.green:not(.no-hover):hover,
+.green:not(.no-hover):focus {
+    background-color:   var(--colour-green-hover) !important;
+}
+
+.blue {
+    background-color:   var(--colour-blue-backer) !important;
+    outline-color:      var(--colour-blue-basic) !important;
+    color:              var(--colour-blue-basic) !important;
+}
+
+.blue:not(.no-hover):hover,
+.blue:not(.no-hover):focus {
+    background-color:   var(--colour-blue-hover) !important;
+}
+
+.purple {
+    background-color:   var(--colour-purple-backer) !important;
+    outline-color:      var(--colour-purple-basic) !important;
+    color:              var(--colour-purple-basic) !important;
+}
+
+.purple:not(.no-hover):hover,
+.purple:not(.no-hover):focus {
+    background-color:   var(--colour-purple-hover) !important;
+}
+
+.dim {
+    background-color:   var(--colour-dim-backer) !important;
+    outline-color:      var(--colour-dim-basic) !important;
+    color:              var(--colour-dim-basic) !important;
+}
+
+.dim:not(.no-hover):hover,
+.dim:not(.no-hover):focus {
+    background-color:   var(--colour-dim-hover) !important;
+}
+
+/* Indicators */
+.warning {
+    background-color:   var(--colour-interaction-warning-backer) !important;
+    outline-color:      var(--colour-interaction-warning-basic) !important;
+    color:              var(--colour-interaction-warning-basic) !important;
+}
+
+.warning:not(.no-hover):hover,
+.warning:not(.no-hover):focus {
+    background-color:   var(--colour-interaction-warning-hover) !important;
+}
+
+.accent {
+    background-color:   var(--colour-interaction-accent-backer) !important;
+    outline-color:      var(--colour-interaction-accent-basic) !important;
+    color:              var(--colour-interaction-accent-basic) !important;
+}
+
+.accent:not(.no-hover):hover,
+.accent:not(.no-hover):focus {
+    background-color:   var(--colour-interaction-accent-hover) !important;
+}
+
+.accept {
+    background-color:   var(--colour-interaction-accept-backer) !important;
+    outline-color:      var(--colour-interaction-accept-basic) !important;
+    color:              var(--colour-interaction-accept-basic) !important;
+}
+
+.accept:not(.no-hover):hover,
+.accept:not(.no-hover):focus {
+    background-color:   var(--colour-interaction-accept-hover) !important;
+}
+
+.cancel {
+    background-color:   var(--colour-interaction-cancel-backer) !important;
+    outline-color:      var(--colour-interaction-cancel-basic) !important;
+    color:              var(--colour-text) !important;
+}
+
+.cancel:not(.no-hover):hover,
+.cancel:not(.no-hover):focus {
+    background-color:   var(--colour-interaction-cancel-hover) !important;
+}
+
+.empty {
+    background-color:   var(--colour-interaction-empty-backer) !important;
+    outline-color:      var(--colour-interaction-empty-basic) !important;
+    color:              var(--colour-text) !important;
+}
+
+.empty:not(.no-hover):hover,
+.empty:not(.no-hover):focus {
+    background-color:   var(--colour-interaction-empty-hover) !important;
+}

@@ -1,0 +1,213 @@
+
+.project-container {
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+    flex-direction: column;
+    min-width: 250px;
+    background-color: var(--colour-ui-backer-light);
+
+    padding: 1rem 1rem 4rem;
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+    gap: 1rem;
+}
+
+
+.tabs-block {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    flex-direction: row;
+    gap: 7px;
+    flex-shrink: 0;
+}
+
+.button-tray {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.tab-button {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+}
+
+/* Project on sidebar */
+.sidebar-project-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-x: hidden; /* Hides horizontal scrolling */
+
+    padding-bottom: 4rem;
+}
+
+.project-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    user-select: none;
+    flex: 1;
+    color: var(--colour-text);
+    text-decoration: none;
+}
+
+.package {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 100%;
+
+    position: relative;
+    color: var(--colour-text);
+    text-decoration: none;
+}
+
+.package::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 1.75rem;
+    height: 100%;
+    width: 1px;
+    top: -0.5rem;
+    background-color: var(--colour-ui-backer-dark);
+    z-index: 1;
+}
+
+.project-content,
+.project-item {
+    position: relative;
+    padding: 0.5rem 0.5rem 0.5rem 3rem;
+    cursor: pointer;
+    width: 100%;
+    color: var(--colour-text);
+    text-decoration: none;
+}
+
+.project-item {
+    padding-left: 5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: -2rem center;
+    background-origin: content-box;
+
+    image-rendering: smooth;
+}
+
+.project-content:hover,
+.project-item:hover,
+.project-content:focus,
+.project-item:focus {
+    background-color: var(--colour-ui-backer-medium);
+}
+
+.project-wrapper.selected > .project-content {
+    background-color: var(--colour-ui-backer-medium);
+}
+
+.project-content::before {
+    content: "";
+    position: absolute;
+    left: 1.2rem;
+    padding: 0.15rem;
+    mask-image: url("../img/close-arrow.svg");
+    width: 15px;
+    height: 15px;
+    mask-position: center;
+    mask-size: cover;
+    display: inline;
+    background-color: var(--colour-ui-backer-dark);
+}
+
+.project-content.active::before {
+    content: "";
+    position: absolute;
+    left: 1.2rem;
+    padding: 0.15rem;
+    mask-image: url("../img/open-arrow.svg");
+    width: 15px;
+    height: 15px;
+    mask-position: center;
+    mask-size: cover;
+    display: inline;
+    background-color: var(--colour-ui-backer-dark);
+}
+
+@media (max-width: 600px) {
+    .tabs-block {
+        flex-direction: column;
+    }
+
+    .bold-button.fit {
+        width: 100%;
+    }
+}
+
+.grid-icon {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+}
+
+.item-icon {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    border-radius: 0.5rem;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.label {
+    line-height: 1rem;
+}
+
+.display-icon {
+    width: 5rem;
+    height: 5rem;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+}
+
+.item-icon:hover {
+    background-color: var(--colour-interaction-accent-backer);
+    cursor: pointer;
+}
+
+.dropdown-holder {
+    position: relative;
+}
+
+.dropdown-content {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    width: 150px;
+    right: 0;
+    top: 2.25rem;
+    gap: 7px;
+
+    padding: 1rem;
+    border-radius: 0.5rem;
+
+    background-color: var(--colour-ui-backer-light);
+    outline: 1px solid var(--colour-ui-backer-border);
+}
+
+.dropdown-content.active {
+    display: flex;
+}
